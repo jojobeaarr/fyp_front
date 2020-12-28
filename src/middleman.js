@@ -15,3 +15,17 @@ export function getCards(container_id, card_id){
             return response.json()
         })
 }
+
+export function updateCards(card_id, card_content){
+        const data = {
+            "card_id": card_id,
+            "card_content": card_content
+        }
+        return fetch(`http://127.0.0.1:5000/api/card/update`, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body:JSON.stringify(data)
+        })
+}

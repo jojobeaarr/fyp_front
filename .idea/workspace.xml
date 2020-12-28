@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78208386-1250-49fe-afdd-3d6bfc51be25" name="Default Changelist" comment="" />
+    <list default="true" id="78208386-1250-49fe-afdd-3d6bfc51be25" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleman.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleman.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +49,6 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -70,7 +74,9 @@
       <workItem from="1605790917749" duration="18496000" />
       <workItem from="1607355241431" duration="4609000" />
       <workItem from="1608554117946" duration="15150000" />
-      <workItem from="1608659438990" duration="39000" />
+      <workItem from="1608659438990" duration="164000" />
+      <workItem from="1608980516506" duration="4623000" />
+      <workItem from="1609158919004" duration="3131000" />
     </task>
     <servers />
   </component>
@@ -103,14 +109,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608659067162" />
-    <state x="647" y="310" key="Github.ShareDialog" timestamp="1608659227755">
+    <state x="606" y="282" key="Github.ShareDialog" timestamp="1608659537147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="647" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1608659227755" />
+    <state x="606" y="282" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1608659537147" />
+    <state x="584" y="117" key="Github.UntrackedFilesDialog" timestamp="1608659554268">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="584" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608659554268" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1608659477757">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608659477757" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1608659570819">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608659570819" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608655385325">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

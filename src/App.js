@@ -16,6 +16,7 @@ class App extends React.Component {
     }
 
     async getCards(){
+        //user1 is a dummy, cards return list of card objects
         let userid = "user1"
         let cards
         let cardsHtml
@@ -23,18 +24,12 @@ class App extends React.Component {
             getCards(container, null).then(function(res){
                 cards = res
                 console.log(cards)
-                cardsHtml = (cards.map((item)=> <Card title={item["title"]} content={item["content"]}/>));
+                cardsHtml = (cards.map((item)=> <Card title={item["title"]} content={item["content"]} card_id={item["card_id"]}/>));
             }))
         this.setState({card_data: cardsHtml});
     }
 
     render() {
-        //user1 is a dummy, cards return list of card objects
-        let dummyjson = {
-            "userid": "user1",
-            "bmc_cards": [{"title": "Customer Segment", "content": ["Student", "Family"]}]
-        }
-
         return (
             <div className="App">
                 <header>
