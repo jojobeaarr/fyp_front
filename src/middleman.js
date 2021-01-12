@@ -1,7 +1,24 @@
 
+export function signUp(name, email, password){
+    const formdata = new FormData()
+    formdata.append("name", name)
+    formdata.append("email", email)
+    formdata.append("password", password)
+    return fetch(`http://127.0.0.1:5000/api/user/create`, {
+        method: "POST",
+        body:formdata
+    }).then((response) => response.json())
+}
 
-export function getContainer(user_id){
-    return fetch(`http://127.0.0.1:5000/api/card/container?username=${user_id}`)
+export function userExist(email){
+    return fetch(`http://127.0.0.1:5000/api/user/exist?email=${email}`)
+        .then(function(response){
+            return response.json()
+        })
+}
+
+export function getContainer(email){
+    return fetch(`http://127.0.0.1:5000/api/card/container?email=${email}`)
         .then(function(response){
             return response.json()
         })
