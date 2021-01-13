@@ -1,4 +1,3 @@
-
 export function signUp(name, email, password){
     const formdata = new FormData()
     formdata.append("name", name)
@@ -17,8 +16,25 @@ export function userExist(email){
         })
 }
 
-export function getContainer(email){
-    return fetch(`http://127.0.0.1:5000/api/card/container?email=${email}`)
+export function login(email, password){
+    const formdata = new FormData()
+    formdata.append("email", email)
+    formdata.append("password", password)
+    return fetch(`http://127.0.0.1:5000/api/user/login`, {
+        method: "POST",
+        body:formdata
+    }).then((response) => {
+        return response.json()
+    })
+}
+
+export function getContainer(auth_token){
+    return fetch(`http://127.0.0.1:5000/api/card/container`, {
+        method: 'post',
+        headers: new Headers({
+            "Authorization": auth_token
+        })
+    })
         .then(function(response){
             return response.json()
         })

@@ -3,9 +3,11 @@ import {Button, Form} from "react-bootstrap";
 import "react-bootstrap";
 import './Login.css';
 import {Link} from "react-router-dom";
+import {login} from "./middleman";
+import PropTypes from 'prop-types';
 
 
-export default function Login(){
+export default function Login({setToken}){
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -14,8 +16,18 @@ export default function Login(){
         return email.length > 0 && password.length > 0;
     }
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
+        await login(email, password).then((response) => {
+            // console.log(response)
+            if (response != "Fail"){
+                console.log("Login success")
+                setToken(response)
+            }
+            else {
+                alert("Invalid email/password")
+            }
+        })
     }
 
     return(
@@ -41,11 +53,15 @@ export default function Login(){
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </Form.Group>
-                <Button block size="lg" type="submit" disabled={!validateForm()}>
+                <Button block size="lg" type="submit" disabled={!validateForm()} onClick={handleSubmit}>
                     Login
                 </Button>
                 <Link to="/signup" className="float-right">Sign Up</Link>
             </Form>
         </div>
     )
+}
+
+Login.propTypes = {
+    setToken: PropTypes.func.isRequired
 }

@@ -2,10 +2,11 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {getCards, getContainer} from "./middleman";
 import Card from "./Card";
+import useToken from "./useToken";
 
 class Dashboard extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {card_data: undefined};
     }
 
@@ -30,10 +31,10 @@ class Dashboard extends React.Component {
 
     async getCards() {
         //user1 is a dummy, cards return list of card objects
-        let userid = "user1"
+        let auth_token = this.props.token
         let cards
         let cardsHtml
-        await getContainer(userid).then(container =>
+        await getContainer(auth_token).then(container =>
             getCards(container, null).then(function (res) {
                 cards = res
                 console.log(cards)

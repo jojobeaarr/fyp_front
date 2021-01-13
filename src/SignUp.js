@@ -4,8 +4,11 @@ import "react-bootstrap";
 import './Login.css';
 import {Link} from "react-router-dom";
 import {signUp, userExist} from "./middleman";
+import PropTypes from 'prop-types';
+import Login from "./Login";
 
-export default function SignUp(){
+
+export default function SignUp({setToken}){
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -54,14 +57,13 @@ export default function SignUp(){
                 <Button block size="lg" type="submit" disabled={!validateForm()} onClick={() => {
                     userExist(email).then((response) => {
                         if (response == "False"){
-                            signUp(name, email, password).then((response) => console.log(response))
+                            signUp(name, email, password).then((response) => setToken(response))
                         }
                         else{
                             //Do something here
                             alert("Email already exists")
                         }
                     })
-
                 }}>
                     Sign Up
                 </Button>
@@ -69,4 +71,8 @@ export default function SignUp(){
             </Form>
         </div>
     )
+}
+
+SignUp.propTypes = {
+    setToken: PropTypes.func.isRequired
 }
