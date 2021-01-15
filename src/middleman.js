@@ -29,14 +29,21 @@ export function login(email, password){
 }
 
 export function getContainer(auth_token){
+
     return fetch(`http://127.0.0.1:5000/api/card/container`, {
-        method: 'post',
+        method: 'get',
         headers: new Headers({
             "Authorization": auth_token
         })
-    })
-        .then(function(response){
-            return response.json()
+    }).then(function(response){
+            if (response.status == 200){
+                return response.json()
+            }
+            else{
+                //Force back to login as the token was invalid
+                sessionStorage.removeItem('token')
+            }
+
         })
 
 }

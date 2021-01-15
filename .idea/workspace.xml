@@ -19,15 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78208386-1250-49fe-afdd-3d6bfc51be25" name="Default Changelist" comment="added signup page and signup function working with backend">
-      <change afterPath="$PROJECT_DIR$/src/useToken.js" afterDir="false" />
+    <list default="true" id="78208386-1250-49fe-afdd-3d6bfc51be25" name="Default Changelist" comment="login auth token working">
+      <change afterPath="$PROJECT_DIR$/src/Dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SignUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/middleman.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleman.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/useToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/useToken.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -67,6 +67,15 @@
       <recent name="D:\Projects\Final Year Project\fyp_front" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -89,7 +98,9 @@
       <workItem from="1609677167115" duration="1830000" />
       <workItem from="1610363620429" duration="5656000" />
       <workItem from="1610452903408" duration="8269000" />
-      <workItem from="1610523595753" duration="9547000" />
+      <workItem from="1610523595753" duration="9628000" />
+      <workItem from="1610638435158" duration="9903000" />
+      <workItem from="1610692190827" duration="2272000" />
     </task>
     <task id="LOCAL-00001" summary="Added remove item feature">
       <created>1609167156628</created>
@@ -105,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610456175290</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="login auth token working">
+      <created>1610557141398</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610557141398</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,9 +148,14 @@
     <MESSAGE value="Added remove item feature" />
     <MESSAGE value="added login page front end" />
     <MESSAGE value="added signup page and signup function working with backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="added signup page and signup function working with backend" />
+    <MESSAGE value="login auth token working" />
+    <option name="LAST_COMMIT_MESSAGE" value="login auth token working" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="223" y="67" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610644725007">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1610644725007" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608557148250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -149,14 +172,78 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="584" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608659554268" />
+    <state width="1515" height="260" key="GridCell.Tab.0.bottom" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.0.center" timestamp="1610648151564">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610648151564" />
+    <state width="1515" height="260" key="GridCell.Tab.0.left" timestamp="1610648151564">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610648151564" />
+    <state width="1515" height="260" key="GridCell.Tab.0.right" timestamp="1610648151564">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610648151564" />
+    <state width="1515" height="260" key="GridCell.Tab.1.bottom" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.1.center" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.1.left" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.1.right" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.2.bottom" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.2.center" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.2.left" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.2.right" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.3.bottom" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.3.center" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.3.left" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
+    <state width="1515" height="260" key="GridCell.Tab.3.right" timestamp="1610648151565">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="260" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1610648151565" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1608659477757">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1608659477757" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610456180022">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1610557149177">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610456180022" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610557149177" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610456151786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

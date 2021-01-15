@@ -2,7 +2,9 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {getCards, getContainer} from "./middleman";
 import Card from "./Card";
-import useToken from "./useToken";
+import {Redirect} from "react-router-dom";
+import './Dashboard.css';
+import {Button} from "react-bootstrap";
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -30,26 +32,42 @@ class Dashboard extends React.Component {
     }
 
     async getCards() {
-        //user1 is a dummy, cards return list of card objects
         let auth_token = this.props.token
         let cards
         let cardsHtml
-        await getContainer(auth_token).then(container =>
+
+        await getContainer(auth_token).then((container) =>
             getCards(container, null).then(function (res) {
                 cards = res
-                console.log(cards)
                 cardsHtml = (cards.map((item) => <Card title={item["title"]} content={item["content"]}
                                                        card_id={item["card_id"]}/>));
             }))
+
         this.setState({card_data: cardsHtml});
     }
 
     render() {
 
+        if (this.props.token == ""){
+            console.log("to login")
+            return (
+                <Redirect to="/login"/>
+            )
+        }
+
         return (
             <div className="Dashboard">
-                <header className="text-center">
-                    <h5 className="h-25 m-4">Business Model Canvas</h5>
+                <div className="topnav">
+                    <a className="active" href="#dashboard">Business Model Canvas</a>
+                    <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                    <Button onClick={() => {
+                        sessionStorage.removeItem('token')
+                        window.location.href = '/login';
+                    }}>Sign Out</Button>
+                </div>
+                <header className="text-left">
                     <h6 className="m-4">Fill in each segment and start a design thinking process using Watson to improve
                         your canvas!</h6>
                 </header>

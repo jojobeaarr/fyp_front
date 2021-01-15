@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from "react";
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from "./Dashboard";
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
@@ -19,14 +19,14 @@ export default function App() {
                         {token ? <Dashboard token={token}/> : <Redirect to="/login"/>}
                     </Route>
                     <Route path="/signup">
-                        <SignUp setToken={setToken}/>
+                        {token ? <Redirect to="/"/> : <SignUp setToken={setToken}/>}
                     </Route>
                     <Route path="/login">
                         {token ? <Redirect to="/"/> : <Login setToken={setToken}/>}
                     </Route>
                     <Route path="/">
                         {token ? <Dashboard token={token}/> : <Redirect to="/login"/>}
-                        {console.log("Token: "+ token)}
+                        {/*{console.log("Token: "+ token)}*/}
                     </Route>
                 </Switch>
             </div>
