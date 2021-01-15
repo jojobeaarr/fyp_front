@@ -33,30 +33,32 @@ export default function Login({setToken}){
     return(
         <div className="Login">
             <header className="text-center">
-                <h5>Login</h5>
+                <h5 className="display-4">Login</h5>
             </header>
             <Form onSubmit={handleSubmit}>
-                <Form.Group size="lg" controlId="email">
+                <Form.Group className="lead" size="lg" controlId="email">
                     <Form.Label>Email</Form.Label>
                     <Form.Control
+                        className="lead"
                         autoFocus
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </Form.Group>
-                <Form.Group size="lg" controlId="password">
+                <Form.Group className="lead" size="lg" controlId="password">
                     <Form.Label>Password</Form.Label>
                     <Form.Control
+                        className="lead"
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </Form.Group>
-                <Button block size="lg" type="submit" disabled={!validateForm()} onClick={handleSubmit}>
+                <Button block size="lg" type="submit" disabled={!validateForm()} style={{background:'#B4B4F1', border:"none"}} onClick={handleSubmit}>
                     Login
                 </Button>
-                <Link to="/signup" className="float-right">Sign Up</Link>
+                <Link to="/signup" className="float-right lead" style={{color: '#B4B4F1'}}>Sign Up</Link>
             </Form>
         </div>
     )

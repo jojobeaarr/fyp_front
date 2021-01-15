@@ -6,8 +6,8 @@ import React, {Component} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMinus} from "@fortawesome/free-solid-svg-icons";
 import {updateCards} from "./middleman";
-// import { connect } from 'react-redux';
-// import { createItem, deleteItem, updateItem, readItems } from 'actions'
+import './Dashboard.css';
+
 
 class BMCCard extends Component {
 
@@ -42,7 +42,7 @@ class BMCCard extends Component {
         //console.log(event.target.value)
         this.state.content.push(this.state.value)
         updateCards(this.state.card_id, this.state.content)
-        this.setState(this.state.content)
+        this.setState({content: this.state.content, value:''})
     }
 
     deleteItem(event){
@@ -56,12 +56,12 @@ class BMCCard extends Component {
     render() {
         return (
             <div className="align-content-between">
-                <Card className="m-4" border={"primary"} style={{width: '18rem'}}>
-                    <Card.Header as="h5">{this.props.title}</Card.Header>
+                <Card className="lead m-4" border="card1" style={{width: '18rem', fontSize:'18px'}}>
+                    <Card.Header className="lead">{this.props.title}</Card.Header>
                     {this.createList(this.props.content)}
                     <Form onSubmit={this.addItem} style={{display: "flex", justifyContent: "space-between"}}>
-                    <Form.Control type="text" value={this.state.value} onChange={this.handleChange} placeholder="Insert here" />
-                    <Button onClick={this.addItem} variant="primary">Add</Button>
+                    <Form.Control className="lead" type="text" value={this.state.value} onChange={this.handleChange} placeholder="Insert here" />
+                    <Button onClick={this.addItem} variant="primary" style={{background:'#8fc2e9', border:"none"}}>Add</Button>
                     </Form>
                 </Card>
             </div>

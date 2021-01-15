@@ -1,6 +1,17 @@
+:root{
+    --main: #14C2C2;
+    --blue: #007BFF;
+    --green: rgba(53,224,213,1);
+    --pink: rgba(232,163,253,1);
+    --light_blue: rgb(143,194,233);
+    --background1: rgb(53,224,213);
+    --background2: linear-gradient(90deg, rgba(53,224,213,1) 0%, rgba(232,163,253,1) 100%);
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #007BFF;
+    background: var(--background1);
+    background: var(--background2);
     overflow: hidden;
 }
 
@@ -9,7 +20,7 @@
     float: left;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px 16px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -17,34 +28,60 @@
 /* Change the color of links on hover */
 .topnav a:hover {
     background-color: white;
-    color: #007BFF;
+    color: var(--green);
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
     background-color: white;
-    color: #007BFF;
+    color: var(--green);
 }
 
 /* Style the links inside the navigation bar */
 .topnav Button {
     float: right;
-    color: white;
+    background: var(--pink);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     border-radius: 0;
+    border-color: transparent;
 }
 
 /* Change the color of links on hover */
 .topnav Button:hover {
     background-color: white;
-    color: #007BFF;
+    color: var(--pink);
+    border-color: transparent;
 }
 
 /* Add a color to the active/current link */
 .topnav Button.active {
     background-color: white;
-    color: #007BFF;
+    color: var(--pink);
+    border-color: transparent;
+}
+
+.border-card1 {
+    border-color: var(--light_blue) !important;
+
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+.btn-outline-secondary {
+    color: var(--light_blue);
+    border-color: var(--light_blue);
+}
+
+.btn-outline-secondary:hover {
+    color: white;
+    background-color: var(--light_blue);
+    border-color: var(--light_blue);
 }
