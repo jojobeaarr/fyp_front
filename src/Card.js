@@ -69,13 +69,4 @@ class BMCCard extends Component {
     }
 }
 
-
 export default BMCCard
-
-// //subscribing to redux store updates
-// const mapStateToProps = ({ menuItems, loading, errors }) => ({
-//     menuItems, loading, errors
-// })
-//
-// //connecting our main component to redux store
-// export default connect(mapStateToProps, { createItem, deleteItem, updateItem, readItems })(Menu);
